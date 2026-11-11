@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>(화) 관현악 전체모임 출결</title><meta name="theme-color" content="#174d3d">
+<style>
+:root{font-family:system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#172b25;background:#f4f7f5;font-synthesis:none}*{box-sizing:border-box}body{margin:0}main{max-width:1100px;margin:0 auto;padding:20px 14px 70px}h1{font-size:clamp(22px,4vw,30px);margin:0 0 7px}h2{font-size:19px;margin:0 0 12px}p{line-height:1.6;margin:7px 0}.muted{color:#52665e;font-size:13px}.section{background:white;border:1px solid #dce5de;border-radius:15px;padding:18px;margin:16px 0;box-shadow:0 2px 14px #1d3c2c08}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{min-width:0}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:11px 14px;font-weight:700;background:#174d3d;color:white}button.secondary{background:#eaf1ed;color:#174d3d}button.outline{background:#fff;color:#174d3d;border:1px solid #9eb7aa}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #92cbb0;outline-offset:1px}input,select,textarea{background:#fff;border:1px solid #b8ccc0;border-radius:8px;padding:10px;color:#142b21}textarea{width:100%;min-height:128px;line-height:1.65;resize:vertical}input[type=date]{min-width:220px;max-width:100%;font-size:16px}.date-select{min-width:80px;max-width:100%;font-size:16px}.date-display{display:block;width:100%;padding:12px;border-radius:9px;background:#edf5ef;font-size:18px;white-space:nowrap;overflow-x:auto}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stat{background:#edf5ef;border-radius:10px;padding:11px;text-align:center}.stat b{font-size:24px;display:block}.stat small{font-size:12px;color:#466352}.notice{background:#fff6dd;border-left:3px solid #d6a539;padding:11px;border-radius:5px;margin-top:12px;white-space:pre-line}.success{background:#e9f6ed;border-left:3px solid #45a06b}.tablewrap{overflow:auto;border:1px solid #dce5de;border-radius:9px;max-height:500px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #e7eee9;padding:8px;text-align:left;font-size:13px}th{background:#eff5f1;position:sticky;top:0;z-index:1}td:first-child{white-space:nowrap;font-weight:700}td input,td select{min-width:105px;width:100%;padding:8px;font-size:13px}td select{min-width:88px}.small{font-size:12px}.tag{font-size:11px;background:#e2ebe5;padding:3px 6px;border-radius:5px;color:#245442}.result{white-space:pre-wrap;font-size:14px;line-height:1.9;background:#fbfdfa;border:1px solid #dae8dd;border-radius:9px;padding:15px;overflow-wrap:anywhere;min-height:160px}.instrument{display:grid;grid-template-columns:84px 1fr;border:1px solid #dae6dd;border-bottom:0;margin:10px 0}.instrument>div{padding:9px;border-bottom:1px solid #dae6dd}.instrument .instname{font-weight:700;background:#f0f6f1}.instrument .instnames{line-height:1.7}.previewArea{margin-top:14px}.hint{font-size:12px;color:#597065}.warn{color:#9b3c26}.hidden{display:none}.pill{display:inline-block;padding:4px 9px;border-radius:100px;background:#e8f2ec;color:#23563c;font-size:12px;font-weight:700}footer{text-align:center;color:#677e70;font-size:12px;margin:25px 0}.tabnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tabnav a{color:#16553f;text-decoration:none;background:#e4eee8;border-radius:20px;padding:8px 12px;font-size:13px;font-weight:700}@media(max-width:640px){main{padding:14px 10px 70px}.section{padding:13px}.stats{grid-template-columns:repeat(2,1fr)}.tablewrap{max-height:none}table,tbody,tr,td{display:block;width:100%}thead{display:none}tbody{display:grid;grid-template-columns:1fr;gap:8px;padding:8px}tr{border:1px solid #dbe5dc;border-radius:10px;padding:8px;background:#fff}td{display:grid;grid-template-columns:99px minmax(0,1fr);gap:5px;align-items:center;border:0;padding:3px}td::before{content:attr(data-label);font-size:12px;color:#567064}td:first-child{font-size:15px}td input,td select{width:100%;min-width:0}.instrument{grid-template-columns:63px 1fr}.result{font-size:13px}}
+</style>
+</head>
+<body><main>
+<header><span class="pill">모바일 · PC · 엑셀 불필요 · 명단 수정판 v7</span><h1>(화) 관현악 전체모임 출결</h1><p class="muted">고정 72명 기준 · 슬래시(/) 구분 텍스트 붙여넣기 · 결과 복사</p><nav class="tabnav"><a href="#bulk">출결 붙여넣기</a><a href="#output">출결 결과</a></nav></header>
+<section class="section"><h2>① 모임 날짜</h2><div class="row"><label for="yearSelect">날짜 선택</label><select id="yearSelect" class="date-select" aria-label="연도"></select><select id="monthSelect" class="date-select" aria-label="월"></select><select id="daySelect" class="date-select" aria-label="일"></select><button class="secondary" id="todayBtn">오늘</button><strong id="dateLabel" class="date-display" aria-live="polite"></strong></div><p class="muted">제목은 선택한 날짜로 <b>11. 10.(화) 관현악 전체모임 출결</b> 형식으로 표시됩니다.</p></section>
+<section class="section" id="bulk"><h2>② 텍스트 붙여넣기</h2><p>한 사람당 한 줄씩 입력하세요. <b>이름/상태</b>만 입력해도 되고, 필요한 정보만 뒤에 추가하면 됩니다.</p><p><b>이름/상태/사유/상세사유/부분참석시간</b> <span class="muted">(뒤 항목은 생략 가능)</span></p><textarea id="bulkInput" spellcheck="false" placeholder=""></textarea><div class="row" style="margin-top:10px"><button id="applyBulk">붙여넣은 출결 적용</button><button class="secondary" id="clearBulk">입력창 비우기</button><button class="outline" id="example">예시 넣기</button><button class="outline" id="reset">전체 출결 초기화</button></div><div id="bulkMessage" class="notice hidden" role="status"></div><p class="hint">입력 예시: <code>김계시/출</code> · <code>최계시/미보고</code> · <code>박계시/부분/가정사/가족모임/16:00~</code> · <code>이계시/결/개인사/개인보고</code>. 이 이름들은 입력 형식을 설명하는 가상 이름이므로 실제 출결을 적용할 때는 고정 명단에 있는 이름으로 바꿔주세요. <code>강은실/개인사/개인연습</code>처럼 상태 대신 정해진 불참 사유를 입력하면 자동으로 결석 처리합니다. 중간 항목을 건너뛸 때만 빈 칸을 <code>/</code>로 남기세요. <b>부분 참석은 사유(3번째 항목)만 출력하며 상세사유(4번째)는 출력하지 않습니다.</b> 출력 시 물결표(~)는 휴대폰 취소선 자동 적용을 막기 위해 모양이 비슷한 문자(～)로 표시됩니다. 명단에 없는 이름은 적용되지 않습니다.</p></section>
+<section class="section" id="output"><h2>③ 출결 결과</h2><div id="stats" class="stats"></div><div id="checkMessage" class="notice" role="status"></div><div class="row" style="margin-top:14px"><button id="copyAll">전체 출결 텍스트 복사</button><button class="secondary" id="copyAtt">참석 부분만 복사</button><button class="secondary" id="copyAbsent">불참 부분만 복사</button></div><div class="previewArea"><h2>복사용 최종 텍스트</h2><div id="result" class="result"></div></div></section>
+<footer>입력 데이터는 이 기기의 브라우저에만 저장됩니다. 별도 서버로 전송하지 않습니다. 공유 기기에서는 사용 후 초기화하세요.</footer>
+</main>
+<script>
+'use strict';
+const ROSTER=[
+ ['Vn.','이채원 강은실 김석현 서한비 손자영 이정호 임수규 장해진 차연주 최진희 최효승'],
+ ['Va.','이주영 장소현'],
+ ['Vc.','박범성 이정빈 정유희 진효남 최태원'],
+ ['Cb.',''],
+ ['Fl.','장하람 강지나 김소희 김지선 이채련 이하빈 조슬기'],
+ ['Cla.','강채은 곽현지 김은송 이수형 정용성 황찬혁'],
+ ['Sax.','진승리 강연수 문주은 서종하 이지인 정신 최성빈 황은선'],
+ ['Hn.','김예은 장윤주 이건'],
+ ['Tp.','박나현 강유영 김서현 박은빈 양가연 윤소현 최지웅A'],
+ ['Tb.','김재빈 김혜주 이병기 이성제 이한나 정재원 채창무'],
+ ['Eup.','박혜람 주성현'],
+ ['Tuba.','안시온 김내영'],
+ ['Per.','최상범 김소연 김영기 김한동 문경욱 석효진 신성은 이중학 전우진 전희주 최지웅B'],
+ ['pa.','오세현']
+];
+const REASONS=['직장','가정사','개인사','건강','행사','타모임','타업무','전도활동','알바','핍박대비','타지','미보고'];
+const STATUSES=['출','결','부분','미보고'];
+const PEOPLE=ROSTER.flatMap(([instrument,list])=>list.split(/\s+/).filter(Boolean).map(name=>({name,instrument})));
+const byName=new Map(PEOPLE.map(x=>[x.name,x]));
+const key='orchestra-attendance-web-v3'; // 기존 사이트의 저장 데이터 유지
+let state={date:localDate(),people:{}};
+function localDate(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+function empty(){return {status:'미보고',reason:'',detail:'',time:''}}
+function get(name){return state.people[name]||empty()}
+function cleanName(s){return String(s||'').replace(/[\s\u3000\u00a0]/g,'').trim()}
+function save(){try{localStorage.setItem(key,JSON.stringify(state))}catch(e){console.warn('저장 실패',e)}}
+function load(){try{const s=JSON.parse(localStorage.getItem(key)||'null');if(s&&typeof s==='object'){state.date=/^\d{4}-\d\d-\d\d$/.test(s.date)?s.date:localDate();if(s.people&&typeof s.people==='object')for(const n of PEOPLE){const p=s.people[n.name];if(p&&typeof p==='object')state.people[n.name]={status:STATUSES.includes(p.status)?p.status:'미보고',reason:String(p.reason||''),detail:String(p.detail||''),time:String(p.time||'')}}}}catch(e){console.warn('저장 데이터 파싱 실패',e)}}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function label(name,p){
+ if(p.status!=='부분')return name;
+ // 부분 참석 표시는 세 번째 항목인 '사유'만 사용한다. '상세사유'는 출력하지 않는다.
+ const reason=String(p.reason||'').trim();
+ // 카카오톡 등에서 ~ 두 개 사이를 취소선으로 인식하지 않게 전각 물결표로 표시
+ const partialTime=String(p.time||'').trim().replace(/~/g,'～');
+ const visible=[reason,partialTime].filter(Boolean).join('/');
+ return visible?`${name}(${visible})`:name;
+}
+function reasonCategory(p){if(p.status==='미보고')return '미보고';const v=(p.reason||'').trim();return REASONS.includes(v)?v:'사유 미기재/확인 필요'}
+function five(items){const lines=[];for(let i=0;i<items.length;i+=5)lines.push(items.slice(i,i+5).join(' '));return lines.join('\n')}
+function titleDate(){const s=state.date||localDate(),[y,m,d]=s.split('-').map(Number),dt=new Date(y,m-1,d);if(dt.getFullYear()!==y||dt.getMonth()!==m-1||dt.getDate()!==d)return '날짜를 확인하세요';const w='일월화수목금토'[dt.getDay()];return `${m}. ${d}.(${w}) 관현악 전체모임 출결`}
+function compute(){const att={},abs={},group={},missing=[];let counts={total:PEOPLE.length,att:0,partial:0,abs:0,unreported:0};for(const [inst] of ROSTER){att[inst]=[];abs[inst]=[]}for(const c of REASONS)group[c]=[];group['사유 미기재/확인 필요']=[];
+ for(const {name,instrument} of PEOPLE){const p=get(name);if(p.status==='출'||p.status==='부분'){counts.att++;if(p.status==='부분')counts.partial++;att[instrument].push(label(name,p))}else{counts.abs++;if(p.status==='미보고'){counts.unreported++;missing.push(name)}abs[instrument].push(label(name,p));const category=reasonCategory(p);group[category].push(name)}}
+ const header=`\u2060${titleDate()}\n\n참석 ${counts.att}명 (부분 ${counts.partial}명)\n`;
+ const attText=header+['지도.',...ROSTER.map(([inst])=>`${inst}${att[inst].length?' '+five(att[inst]).replace(/\n/g,'\n    '):''}`)].join('\n');
+ const reasonLines=Object.entries(group).filter(([,names])=>names.length).map(([reason,names])=>five(names)+'('+reason+')');
+ const absText=`*불참 ${counts.abs}명 (미보고 ${counts.unreported}명)`+(reasonLines.length?'\n'+reasonLines.join('\n'):'');
+ const full=attText+'\nㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ\n'+absText;
+ return {counts,att,group,attText,absText,full,missing}}
+function renderResults(){document.getElementById('dateLabel').textContent='선택 날짜: '+titleDate().split(' 관현악')[0];const o=compute(),c=o.counts;document.getElementById('stats').innerHTML=[['전체',c.total],['참석',c.att],['부분 참석',c.partial],['불참·미보고',c.abs]].map(([l,n])=>`<div class="stat"><small>${l}</small><b>${n}명</b></div>`).join('');const msg=document.getElementById('checkMessage');msg.className='notice '+(c.total===c.att+c.abs?'success':'');msg.textContent=`전체 ${c.total}명 = 참석 ${c.att}명 + 불참·미보고 ${c.abs}명\n미보고 ${c.unreported}명 · ${c.unreported?'미보고자: '+o.missing.join(', '):'전원 상태 입력 완료'}`;
+ document.getElementById('result').textContent=o.full;}
+function applyBulk(){const text=document.getElementById('bulkInput').value,lines=text.split(/\r?\n/),errors=[],updates=new Map(),duplicates=[];let valid=0;for(let i=0;i<lines.length;i++){const line=lines[i].trim();if(!line)continue;const v=line.split('/');if(v.length<2||v.length>5){errors.push(`${i+1}행: 이름/상태를 기본으로 최대 5개 항목까지 입력할 수 있습니다.`);continue}let [raw='',statusRaw='',reasonRaw='',detailRaw='',timeRaw='']=v.map(x=>x.trim());if(!STATUSES.includes(statusRaw.replace(/\s/g,''))&&REASONS.includes(statusRaw)){timeRaw=detailRaw;detailRaw=reasonRaw;reasonRaw=statusRaw;statusRaw='결'}const found=PEOPLE.find(p=>cleanName(p.name)===cleanName(raw));if(!found){errors.push(`${i+1}행: 고정 명단에 없는 이름 [${raw}]`);continue}const status=statusRaw.replace(/\s/g,'');if(!STATUSES.includes(status)){errors.push(`${i+1}행: ${raw}의 상태 [${statusRaw}]가 올바르지 않습니다.`);continue}if(updates.has(found.name))duplicates.push(`${i+1}행: ${found.name} 중복 입력(마지막 입력 적용)`);updates.set(found.name,{status,reason:reasonRaw,detail:detailRaw,time:timeRaw});valid++}
+ for(const [name,p] of updates)state.people[name]=p;save();renderResults();const m=document.getElementById('bulkMessage');m.classList.remove('hidden');m.className='notice '+(errors.length?'':'success');m.textContent=`${updates.size}명 출결 적용 완료${valid!==updates.size?` (입력 ${valid}건)`:''}. 입력하지 않은 인원은 기존 상태(처음에는 미보고)를 유지합니다.`+(duplicates.length?'\n'+duplicates.join('\n'):'')+(errors.length?'\n검토 필요:\n'+errors.join('\n'):'');m.scrollIntoView({behavior:'smooth',block:'nearest'})}
+async function copy(text,button){try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text)}else{const el=document.createElement('textarea');el.value=text;el.style.position='fixed';el.style.opacity='0';document.body.appendChild(el);el.select();const ok=document.execCommand('copy');el.remove();if(!ok)throw Error('지원하지 않음')}const old=button.textContent;button.textContent='복사 완료';setTimeout(()=>button.textContent=old,1700)}catch(e){window.prompt('자동 복사가 지원되지 않습니다.\n아래 텍스트를 직접 복사하세요.',text)}}
+load();if(!state.date)state.date=localDate();
+const yearSelect=document.getElementById('yearSelect'),monthSelect=document.getElementById('monthSelect'),daySelect=document.getElementById('daySelect');
+function addOptions(select,lo,hi,suffix){select.replaceChildren();for(let i=lo;i<=hi;i++){const o=document.createElement('option');o.value=String(i);o.textContent=i+suffix;select.appendChild(o)}}
+function syncDateControls(){const [y,m,d]=state.date.split('-').map(Number);addOptions(yearSelect,Math.min(2020,y),Math.max(2040,y),'년');addOptions(monthSelect,1,12,'월');yearSelect.value=String(y);monthSelect.value=String(m);syncDays(d)}
+function syncDays(preferred){const y=Number(yearSelect.value),m=Number(monthSelect.value),days=new Date(y,m,0).getDate();addOptions(daySelect,1,days,'일');daySelect.value=String(Math.min(preferred||1,days))}
+function saveDateControls(){const y=Number(yearSelect.value),m=Number(monthSelect.value),d=Number(daySelect.value);state.date=[String(y),String(m).padStart(2,'0'),String(d).padStart(2,'0')].join('-');save();renderResults()}
+yearSelect.addEventListener('change',()=>{syncDays(Number(daySelect.value));saveDateControls()});
+monthSelect.addEventListener('change',()=>{syncDays(Number(daySelect.value));saveDateControls()});
+daySelect.addEventListener('change',saveDateControls);
+document.getElementById('todayBtn').addEventListener('click',()=>{state.date=localDate();syncDateControls();save();renderResults()});syncDateControls();
+document.getElementById('applyBulk').addEventListener('click',applyBulk);
+document.getElementById('clearBulk').addEventListener('click',()=>document.getElementById('bulkInput').value='');
+const exampleLines=['김계시/출','최계시/미보고','박계시/부분/가정사/가족모임/16:00~','이계시/결/개인사/개인보고'];
+const exampleText=exampleLines.join(String.fromCharCode(10));
+document.getElementById('bulkInput').placeholder=exampleText;
+document.getElementById('example').addEventListener('click',()=>{document.getElementById('bulkInput').value=exampleText});
+document.getElementById('reset').addEventListener('click',()=>{if(!confirm(`${PEOPLE.length}명 출결 상태를 모두 미보고로 초기화할까요?`))return;state.people={};save();renderResults();document.getElementById('bulkMessage').classList.add('hidden')});
+document.getElementById('copyAll').addEventListener('click',e=>copy(compute().full,e.currentTarget));document.getElementById('copyAtt').addEventListener('click',e=>copy(compute().attText,e.currentTarget));document.getElementById('copyAbsent').addEventListener('click',e=>copy(compute().absText,e.currentTarget));
+renderResults();
+</script></body></html>
